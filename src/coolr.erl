@@ -6,7 +6,7 @@
 %%
 
 do(String) -> do(String, 25).
-do(String, Shade) -> to_hex(shade(rgb(hash(String)), Shade)).
+do(String, Light) -> to_hex(light(rgb(hash(String)), Light)).
 
 %%
 %% Internal
@@ -23,7 +23,7 @@ rgb(Int) ->
     , (Int bsr 8)  band 16#FF
     }.
 
-shade({R, G, B}, Amt) ->
+light({R, G, B}, Amt) ->
     { check(R + Amt)
     , check(G + Amt)
     , check(B + Amt)
@@ -31,7 +31,7 @@ shade({R, G, B}, Amt) ->
 
 check(Col) when (Col < 255) and (Col >= 1) -> Col;
 check(Col) when (Col < 255) -> 0;
-check(Col) -> 255.
+check(_Col) -> 255.
 
 to_hex({R, G, B}) ->
     to_hex(R) ++ to_hex(G) ++ to_hex(B);
