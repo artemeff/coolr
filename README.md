@@ -2,7 +2,7 @@
 
 ---
 
-Coolr can generate beaty colors from strings. Inspired by [String to Color](http://icorbin.com/code/string_to_color/example.html) and [Colos gem](https://github.com/artemeff/colos).
+Coolr can generate beaty colors from strings. Inspired by [String to Color](https://github.com/brandoncorbin/string_to_color) and [Colos gem](https://github.com/artemeff/colos).
 
 ---
 
